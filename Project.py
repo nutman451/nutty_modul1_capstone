@@ -11,20 +11,20 @@ dict_guru= {
 list_penugasan = ['tugas','UTS','UAS']
 dict_nilai_siswa = {
         'S001':{
-            'nama': 'Benedict Emanuel Sutrisna',
+            'nama': 'Benedict',
             'Tugas': 75,
             'UTS': 60,
             'UAS': 67
 
         },
         'S002':{
-            'nama': 'Cahyo Wicaksono',
+            'nama': 'Cahyo',
             'Tugas': 85,
             'UTS': 70,
             'UAS': 77
         },
         'S003':{
-            'nama': 'Deva Marina',
+            'nama': 'Deva',
             'Tugas': 78,
             'UTS': 80,
             'UAS': 67
