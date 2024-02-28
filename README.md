@@ -18,7 +18,7 @@ Project.py
 
 **Penggunaan**:  
 Untuk menggunakan proyek ini, ikuti langkah-langkah berikut:
-1. Jalankan file python `project.py`.
+1. Jalankan file python `Project.py`.
 2. Ikuti petunjuk di layar.
 
 **Fitur**:  
