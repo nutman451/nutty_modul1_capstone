@@ -53,12 +53,14 @@ def validasi(val_type,var_input,batas=[0,0]):
             else:
                 return False
 
+#menampilkan ID dan nama setiap siswa dalam dictionary
 def show_ID_name():
     global dict_nilai_siswa
     print('')
     for ID in dict_nilai_siswa.keys():
         print(f'ID: {ID}, nama: {dict_nilai_siswa[ID]['nama']}')
 
+#menampilkan semua informasi siswa sesuai ID yang dimasukkan
 def show_student_info(ID):
     global dict_nilai_siswa
     print(f'\nID: {ID}')
@@ -149,6 +151,7 @@ def read_spesifik_ID():
     
     return
 
+#menampilkan siswa dengan nilai penugasan yang dibawah nilai KKM sesuai dengan penugasan yang dipilih user
 def read_bawah_KKM(penugasan):
     global dict_nilai_siswa
     print('')
@@ -163,7 +166,7 @@ def read_bawah_KKM(penugasan):
             print('')
     print('\n')
 
-
+#menu pemilihan penugasan
 def Menu_bawah_KKM():
     print('''
 
@@ -301,7 +304,7 @@ nilai [{ID_murid}] [{kolom}] setelah di-edit :{nilai}
         if ulang.lower() == 'y':
             single_oopdate(ID_murid)
 
-
+#menu untuk memilih kolom data siswa yang akan di-edit
 def menu_single_oopdate(ID_murid):
     global dict_nilai_siswa
     while True:
@@ -359,7 +362,7 @@ def menu_update():
         menu_update()
     return
 
-#menghapus semua 
+#menghapus semua data siswa yang dipilih
 def delete_siswa()-> None: 
     global dict_nilai_siswa
     show_ID_name()
@@ -420,7 +423,7 @@ Program thisStudentScore
 ========================
 ''')
         id_guru = input('masukkan ID guru untuk memulai login, atau masukkan "0" untuk keluar program \ninput: ')
-        if id_guru.lower() == '0':
+        if id_guru == '0':
             print('program dimatikan')
             break
         password = input('masukkan password: ')
