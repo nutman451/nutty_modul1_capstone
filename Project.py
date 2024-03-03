@@ -92,9 +92,13 @@ def create_siswa ():
             for i in list_penugasan:
                 while True:
                     nilai = input(f'masukkan nilai {i} : ')
-                    if validasi('cek_nilai',nilai):
-                        dict_nilai_siswa[ID_siswa][i] = int(nilai)
-                        break
+                    if validasi('numeric',nilai):
+                        nilai = int(nilai)
+                        if validasi('cek_batas',nilai,[0,100]):
+                            dict_nilai_siswa[ID_siswa][i] = nilai
+                            break
+                        else:
+                            print('error, nilai harus berupa angka diantara 0 dan 100')
                     else:
                         print('error, nilai harus berupa angka diantara 0 dan 100')
             print(f'siswa {ID_siswa} berhasil masuk daftar siswa')
